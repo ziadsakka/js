@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="./imges/5801789.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style (1).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <main>
+        <div class="container my-5">
+            <div class="book-content">
+                <h1 class="mb-5 text-center mx-auto text-black">Bookmarker</h1>
+                <h2 class="text-center pt-4">
+                    <i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i>
+                </h2>
+            </div>
+
+            <div class="site-name mt-5 mb-4">
+                <label for="siteName" class="fw-semibold mb-2"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+                <input oninput="validateAllBookmarks(this)" type="text" placeholder="Bookmark Name" id="siteName" class="form-control d-block w-100" />
+            </div>
+            <div class="site-url">
+                <label for="siteURL" class="fw-semibold mt-4 mb-2"><i class="fa-solid fa-link me-2"></i> Site URL</label>
+                <input oninput="validateAllBookmarks(this)" type="text" placeholder="Website URL" id="siteURL" class="form-control d-block w-100" />
+            </div>
+
+            <button type="button" class="btn px-5 my-4 mx-auto d-block" id="submitBtn" onclick="addBookmark()">Submit</button>
+        </div>
+
+        <table class="table text-center container">
+            <thead class="fw-bold">
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent"></tbody>
+        </table>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-4 mb-2" id="exampleModalLabel">
+                            <span class="d-inline-block me-2"></span>
+                            <span class="d-inline-block me-2"></span>
+                            <span class="d-inline-block me-2"></span>
+                            <i class="icon"></i>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModalBtn"></button>
+                    </div>
+                    <div class="modal-body mt-2">
+                        <p class="fw-bold">Site Name or URL is not valid. Please follow the rules below:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fa-regular fa-circle-right"></i> Site name must contain at least 3 characters.</li>
+                            <li class="mt-2"><i class="fa-regular fa-circle-right"></i> Site URL must be a valid one (must start with http:// or https://).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
